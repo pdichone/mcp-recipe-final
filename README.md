@@ -25,8 +25,8 @@ The `legacy-v1` branch stays frozen on this setup: `git checkout legacy-v1`.
 
 `recipe_server.py` listens on `0.0.0.0` over Streamable HTTP and has **no auth**. Once it's
 deployed (Render or anywhere public), anyone who finds the URL can call every tool, including the
-ones that write files and report system info. Unauthenticated MCP servers were exploited in the
-wild in 2026.
+ones that write files and report system info. Attackers actively scan the internet for exposed
+MCP servers.
 
 - Treat the deploy lecture as a demo. Tear the service down when you're done, or keep the URL private.
 - Don't add tools that touch real data, secrets or paid APIs to a public, unauthenticated server.
